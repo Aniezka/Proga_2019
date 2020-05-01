@@ -1,11 +1,32 @@
-# ДЗ1
+# HW5
 
-Придумайте любые 3 темы (например, "лингвистические термины", "фамилии актеров", "блюда грузинской кухни") и составьте по каждой из них список из 10-15 слов, лучше длинных. Списки слов по разным темам должны быть сохранены в отдельных txt-файлах.
+This homework was done on mac OS, so some commands are specific for this system.
 
-При запуске программа должна предлагать пользователю выбрать одну из трех тем и загружать список слов, соответствующий выбору. Далее она должна случайным образом выбирать из списка и говорить пользователю что-то на подобии "У вас есть N попыток, чтобы угадать слово из X букв" и выводить строчку из _ по количеству букв в слове, разделенных пробелами. Количество попыток нужно выбрать самостоятельно, оно должно всегда быть одинаковым.
+Install brew (package manager):
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-Если пользователь угадал букву, то программа должна заменять _ в соответствующем месте на угаданную букву
+Install postgres:
+pip install postgres
 
-Программа должна выдавать разные сообщения в зависимости от того, угадал пользователь букву или нет, а также если он уже вводил эту букву или если введенный символ — не буква. Чувствительность к регистру не нужна!
+Install psql:
+brew install psql
 
-Если названной буквы нет в слове, то программа должна рисовать деталь человечка. Обратите внимание, что количество деталей должно быть равно количеству попыток! Как будет выглядеть картинка, выбирайте сами.
+Run DB:
+pg_ctl -D /usr/local/var/postgres start && brew services start postgresql
+
+Create new user:
+createuser <username>
+
+Create DB (name "models"):
+createdb models
+
+Username and db name your can config in local "config.txt" file that should be in the same directory as HW5.ipynb jup. notebook.
+Structure of "config.txt" file:
+{
+    'drivername': 'postgres',
+    'host': 'localhost',
+    'port': '5432',
+    'username': '<username>',
+    'password': 'admin',
+    'database': 'models'
+}
