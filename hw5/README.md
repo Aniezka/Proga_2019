@@ -22,7 +22,7 @@ createdb models
 
 Username and db name your can config in local "config.txt" file that should be in the same directory as HW5.ipynb jup. notebook. 
 Structure of "config.json" file:
-``
+```
 {
     'drivername': 'postgres',
     'host': 'localhost',
@@ -31,4 +31,4 @@ Structure of "config.json" file:
     'password': 'admin',
     'database': 'models'
 }
-``
+```
