@@ -20,7 +20,7 @@ createuser <username>
 Create DB (name "models"):
 createdb models
 
-Username and db name your can config in local "config.txt" file that should be in the same directory as HW5.ipynb jup. notebook.
+Username and db name your can config in local "config.txt" file that should be in the same directory as HW5.ipynb jup. notebook. 
 Structure of "config.txt" file:
 {
     'drivername': 'postgres',
